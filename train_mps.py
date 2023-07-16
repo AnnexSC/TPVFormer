@@ -17,7 +17,6 @@ from timm.scheduler import CosineLRScheduler
 import warnings
 warnings.filterwarnings("ignore")
 
-
 def pass_print(*args, **kwargs):
     pass
 
@@ -36,6 +35,8 @@ def main_mps(args):
 
     max_num_epochs = cfg.max_epochs
     grid_size = cfg.grid_size
+
+    distributed = False
 
     # init DDP
     # distributed = True
